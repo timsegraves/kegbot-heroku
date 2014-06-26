@@ -1,3 +1,4 @@
+# Test
 # Local settings for kegbot.
 # Edit settings, then copy this file to /etc/kegbot/local_settings.py or
 # ~/.kegbot/local_settings.py
