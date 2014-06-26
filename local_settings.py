@@ -78,3 +78,19 @@ UNTAPPD_API_KEY = ''
 GMT_OFFSET = '-5'
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
+
+# Tell Kegbot use the SMTP e-mail backend.
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+
+# SMTP server hostname (default: 'localhost') and port (default: 25).
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_PORT = 25
+
+# Credentials for SMTP server.
+EMAIL_HOST_USER = os.environ['SENDGRID_USER']
+EMAIL_HOST_PASSWORD = os.environ['SENDGRID_PASSWORD']
+EMAIL_USE_SSL = False
+EMAIL_USE_TLS = False
+
+# "From" address for e-mails.
+EMAIL_FROM_ADDRESS = 'kask@sendgrid.com'
